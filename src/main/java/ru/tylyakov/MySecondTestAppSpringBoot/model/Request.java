@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Request {
+
     @Override
     public String toString(){
         return "{" + uid + '\'' +
@@ -27,6 +28,7 @@ public class Request {
                 '}';
 
     }
+
 
     @NotBlank
     @Size(max = 32)
@@ -46,4 +48,7 @@ public class Request {
     private int templateId;
     private int productCode;
     private int smsCode;
+    private Long requestTime;
+
+
 }

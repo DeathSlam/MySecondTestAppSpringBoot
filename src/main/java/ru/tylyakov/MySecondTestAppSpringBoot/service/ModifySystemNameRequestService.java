@@ -15,7 +15,8 @@ public class ModifySystemNameRequestService implements ModifyRequestService {
 
     @Override
     public void modify(Request request){
-        request.setSystemName("Service 1");
+        request.setSource("Service 1");
+        request.setRequestTime(System.currentTimeMillis());
 
         HttpEntity<Request> httpEntity = new HttpEntity<>(request);
 
